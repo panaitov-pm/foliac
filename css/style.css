@@ -1,0 +1,597 @@
+/* -----------------------------------------
+ FONTS
+----------------------------------------- */
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+  	   url('../fonts/Lato-Bold.woff') format('woff'),
+  	   url('../fonts/Lato-Bold.ttf')  format('truetype'),
+  	   url('../fonts/Lato-Bold.svg#../fonts/Lato-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  	   url('../fonts/Lato-Regular.woff') format('woff'),
+  	   url('../fonts/Lato-Regular.ttf')  format('truetype'),
+  	   url('../fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigJohn';
+  src: url('../fonts/BigJohn.eot?#iefix') format('embedded-opentype'),
+  	   url('../fonts/BigJohn.otf')  format('opentype'),
+	   url('../fonts/BigJohn.woff') format('woff'), 
+	   url('../fonts/BigJohn.ttf')  format('truetype'),
+	   url('../fonts/BigJohn.svg#BigJohn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SlimJoe';
+  src: url('../fonts/SlimJoe.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SlimJoe.otf')  format('opentype'),
+	   url('../fonts/SlimJoe.woff') format('woff'),
+	   url('../fonts/SlimJoe.ttf')  format('truetype'),
+	   url('../fonts/SlimJoe.svg#SlimJoe') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -----------------------------------------
+ Placeholder's styling
+----------------------------------------- */
+*::-webkit-input-placeholder {
+	font-weight: 700;
+	color: #a6a5a5;
+}
+*:-moz-placeholder {
+	font-weight: 700;
+	color: #a6a5a5;
+}
+*::-moz-placeholder {
+	font-weight: 700;
+	color: #a6a5a5;
+}
+*:-ms-input-placeholder {
+	font-weight: 700;
+	color: #a6a5a5;
+}
+*::-ms-input-placeholder {
+	font-weight: 700;
+	color: #a6a5a5;
+}
+
+/* -----------------------------------------
+ GLOBAL
+----------------------------------------- */
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+}
+
+input,
+textarea {
+	outline: 0;
+	border: 0;
+}
+
+.z-font {
+	font-size: 0;
+}
+
+.base-font {
+	font-size: 16px;
+}
+
+.transition {
+	transition: all 0.3s ease-in-out;
+}
+
+/* -----------------------------------------
+ HEADER
+----------------------------------------- */
+header {
+	position: relative;
+	padding-top: 36px;
+	min-height: 650px;
+	background: url(../img/header-bg.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3c4955;
+	opacity: 0.9;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1140px;
+	z-index: 1;
+}
+
+.top-line {
+	height: 100px;
+	line-height: 100px;
+}
+
+.logo {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+nav {
+	display: inline-block;
+	width: 80%;
+	text-align: right;
+	vertical-align: middle;
+}
+
+nav li {
+	position: relative;
+	display: inline-block;
+	padding: 0 50px;
+	font-size: 16px;
+}
+
+nav li:after {
+	content: "/";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 18px;
+	vertical-align: middle;
+	color: #999;
+}
+
+nav li:last-child {
+	padding-right: 0;
+}
+
+nav li:last-child:after {
+	content: "";
+}
+
+nav a {
+	padding: 2px;
+	font-weight: 700;
+	transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+color: #48bf72;
+}
+
+.intro {
+	margin-top: 150px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.intro__title {
+	font-family: 'BigJohn', 'Lato', sans-serif;
+	font-size: 46px;
+}
+
+.intro__subtitle {
+	margin: 20px 0 45px;
+	font-family: 'SlimJoe', 'Lato', sans-serif;
+	font-size: 30px;
+}
+
+.main-button {
+	padding: 12px 20px;
+	border: 2px solid #48bf72;
+	outline: 0;
+	background-color: transparent; 
+	text-transform: uppercase;
+	color: #48bf72;
+}
+
+.main-button:hover {
+	background-color: #48bf72;
+	color: #fff;
+}
+
+/* -----------------------------------------
+ PORTFOLIO
+----------------------------------------- */
+.portfolio {
+	padding: 51px 0 90px;
+	background-color: #f9f9f9;
+	overflow: hidden;
+	text-align: center;
+}
+
+.nav-bar {
+	margin-bottom: 11px; /* 11 + img-top(margitn-top) 40 = 51px*/
+}
+
+.nav-bar li {
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 16px;
+}
+
+.nav-bar li:first-child {
+	margin-left: 0;
+}
+
+.nav-bar a {
+	display: block;
+	padding: 8px 15px;
+	font-weight: 700;
+	border-radius: 2px;
+	background-color: #eaeaea;
+	color: #3c4955;
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-bar a:hover {
+	color: #FFF;
+	background-color: #48bf72;
+}
+
+/* LEFT SIDE */
+.left-side {
+	float: left;
+	max-width: 450px;
+	margin-right: 40px;
+}
+
+.left-side .img-box {
+	position: relative;
+	height: 302px;
+}
+
+.left-side .img-box--height {
+	height: 487px;
+}
+
+/* RIGHT SIDE */
+.right-side {
+	float: right;
+	max-width: 650px;
+}
+
+.right-side .img-box {
+	height: 350px;
+}
+
+.right-side .img-box--height {
+	height: 438px;
+}
+
+/* IMG-BOX */
+.img-box {
+	position: relative;
+	margin-top: 40px;
+}
+
+.img-box:last-child {
+	margin-bottom: 0;
+}
+
+.img-box img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.overlay--portfolio {
+	border-radius: 10px;
+	text-align: center;
+	background-color: rgba(72, 191, 114, 0);
+	transition: all 0.3s ease-in-out;
+}
+
+.img-box:hover .overlay--portfolio {
+	background-color: rgba(72, 191, 114, 0.9);
+}
+
+.overlay--portfolio .overlay__text {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+}
+
+.img-box:hover .overlay__text {
+	opacity: 1;
+}
+
+.overlay--portfolio .overlay__title {
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+/* -----------------------------------------
+ ABOUT
+----------------------------------------- */
+.about {
+	position: relative;
+	min-height: 500px;
+	background: url(../img/about-bg.jpg) center 47% no-repeat;
+}
+
+.overlay--about {
+	opacity: 0.73;
+}
+
+.about__inner {
+	float: right;
+	padding-top: 85px;
+	padding-right: 115px;
+	width: 49%;
+}
+
+.about__title {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.about__subtitle {
+	margin: 10px 0 40px;
+	font-size: 22px;
+}
+
+.about__text {
+	line-height: 1.526;
+}
+
+.main-button--about {
+	margin-top: 40px;
+	border: 2px solid #3c4955;
+	border-radius: 3px;
+	color: #3c4955;
+}
+
+.main-button--about:hover {
+	background-color: #3c4955;
+	color: #FFF;
+}
+
+/* -----------------------------------------
+ CONTACT
+----------------------------------------- */
+.contact {
+	padding: 50px 0 52px;
+	text-align: center;
+	background-color: #f9f9f9;
+}
+
+.contact__title {
+	font-family: 'BigJohn', 'Lato', sans-serif;
+	font-size: 26px;
+	text-transform: uppercase;
+	color: #48bf72;
+}
+
+.form {
+	margin: 50px auto 0;
+	max-width: 700px;
+}
+
+.form__field {
+	position: relative;
+	display: inline-block;
+	margin-left: 24px;
+	margin-bottom: 30px;
+	width: 335px;
+	height: 50px;
+	padding: 2px 2px 2px 50px;
+	border-radius: 3px;
+	background-color: #3c4955;
+}
+
+.form__field:first-child {
+	margin-left: 0;
+}
+
+.form__field:before {
+	position: absolute;
+	top: 19px;
+	left: 50px;
+	content: "";
+	width: 6px;
+	border: 6px solid;
+	border-color: transparent transparent transparent #3c4955;
+}
+
+.form__field--size {
+	margin-left: 0;
+	width: 100%;
+	height: 228px;
+}
+
+.form__field i {
+	position: absolute;
+	top: 11px;
+	left: 15px;
+	font-size: 24px;
+}
+
+.form__field .fa-envelope {
+	left: 13px;
+}
+
+.form__field input,
+.form__field textarea {
+	width: 100%;
+	height: 100%;
+	padding: 0 5px 0 21px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-color: #f1f1f1;
+	color: #3c4955;
+}
+
+.form__field textarea {
+	display: block;
+	padding-top: 12px;
+	width: 100%;
+	max-width: 650px;
+	height: 224px;
+	max-height: 224px;
+	resize: none;
+	overflow: auto;
+}
+
+.main-button--form {
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	letter-spacing: 2.2px;
+	background-color: #48bf72;
+	color: #FFF;
+}
+
+.main-button--form:hover {
+	background-color: #fff;
+	color: #48bf72;
+	font-weight: 700;
+}
+
+/* -----------------------------------------
+ FOOTER
+----------------------------------------- */
+footer {
+	height: 201px;
+	line-height: 201px;
+	background-color: #3c4955;
+}
+
+.copyright,
+.social-icon {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.copyright--bold {
+	font-weight: 700;
+}
+
+.social-icon {
+	position: relative;
+	text-align: right;
+}
+
+.social-icon a {
+	position: absolute;
+	top: -8px;
+	left: 0;
+	display: block;
+	height: 150%;
+	line-height: 1.3;
+	width: 100%;
+	text-align: center;	
+	color: #fff;
+	z-index: 1;
+}
+
+.social-icon a[href*="twitter"]:hover {
+	color: #55acee;
+}
+
+.social-icon a[href*="linkedin"]:hover {
+	color: #0976b4;
+}
+
+.social-icon a[href*="dribbble"]:hover {
+	color: #ea4c89;
+}
+
+.social-icon a[href*="behance"]:hover {
+    color: #1769FF;
+}
+
+.social-icon a i {
+	margin-top: 12px;
+	display: block;
+	font-size: 25px;
+}
+
+/* HEXAGON */
+.hexagon { 
+	display: inline-block;
+	position: relative;
+	margin-left: 40px;
+	width: 50px;
+	height: 33px;
+	border-radius: 5px;
+}
+
+.hexagon:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	background: inherit;
+	-webkit-transform: rotate(60deg); 
+	      -ms-transform: rotate(60deg);  
+	          transform: rotate(60deg);
+}
+
+.hexagon:after { 
+	content: '';
+	position: absolute;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	background: inherit;
+	-webkit-transform: rotate(-60deg);  
+	      -ms-transform: rotate(-60deg);  
+	          transform: rotate(-60deg);
+}
+.hexagon--twitter{
+	background-color: #55acee;
+}
+
+.hexagon--in{
+	background-color: #0976b4;
+}
+
+.hexagon--dribbble{
+	background-color: #ea4c89;
+}
+
+.hexagon--be{
+	background-color: #1769ff;
+}
+
+.hexagon--twitter:hover,
+.hexagon--in:hover,
+.hexagon--dribbble:hover,
+.hexagon--be:hover{
+	background-color: #fff;
+}
